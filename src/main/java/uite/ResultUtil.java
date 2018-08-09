@@ -1,10 +1,16 @@
 package uite;
 
 
+/**
+ * 这是所有返回值的工具类
+ * 01.正确 或者 错误
+ * 02.错误信息
+ * 03.正确的时候 有可能有数据
+ */
 public class ResultUtil {
 
-    private int status;   // 状态  1成功   0失败
-    private String message;   // 错误信息
+    private int status; // 状态 1成功 0失败
+    private String message; // 错误信息
     private Object data; // 返回的数据
 
     /**
