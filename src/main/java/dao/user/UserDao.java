@@ -11,4 +11,9 @@ import java.io.Serializable;
 
 public interface UserDao extends IBaseDao<Users> {
 
+
+    String isusername(String userName);
+
+    Users login(String userName, String password);
+
 }

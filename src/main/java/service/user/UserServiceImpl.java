@@ -4,6 +4,7 @@ package service.user;
 import dao.user.UserDao;
 import dao.user.UserDaoImpl;
 import entity.Users;
+import org.junit.jupiter.api.Test;
 import uite.PageUtil;
 
 import java.io.Serializable;
@@ -14,6 +15,11 @@ public class UserServiceImpl implements UserService {
     //耦合 加上 静态代理
     private UserDao userDao = new UserDaoImpl();
 
+    @Test
+    public void te() {
+        System.out.println(userDao.deleteByCondition(21));
+    }
+
     @Override
     public int add(Users users) {
         return userDao.add(users);
@@ -21,7 +27,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int deleteByCondition(Serializable id) {
-        return 0;
+        return userDao.deleteByCondition(id);
     }
 
     @Override
@@ -41,11 +47,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int findRownum() {
-        return 0;
+        return userDao.findRownum();
     }
 
     @Override
     public List<Users> findAllByPage(PageUtil util, Object... params) {
-        return null;
+        return userDao.findAllByPage(util);
+    }
+
+    @Override
+    public String isusername(String userName) {
+        return userDao.isusername(userName);
+    }
+
+    @Override
+    public Users login(String userName, String password) {
+        return userDao.login(userName, password);
     }
 }

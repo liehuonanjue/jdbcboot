@@ -9,6 +9,15 @@ public class Users implements Serializable {
     private String password;//用户名
     private String email;//email
     private Integer userType;//用户类型 0：管理员 1：普通用户
+    private String file;  //文件上传
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
 
     public Users() {
     }

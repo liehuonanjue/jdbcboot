@@ -1,11 +1,24 @@
 package uite;
 
-public class PageUtil {
+import java.util.List;
+
+public class PageUtil<T> {
+    private List<T> list;
+
 
     private int pageIndex; //当前页
     private int pageSize = 2; //页大小
     private int pageCount; //总页数
     private int totalCount; //总记录数
+
+
+    public List<T> getList() {
+        return list;
+    }
+
+    public void setList(List<T> list) {
+        this.list = list;
+    }
 
     /**
      * 因为现在我们以及确定了 页大小
@@ -63,9 +76,10 @@ public class PageUtil {
     @Override
     public String toString() {
         return "PageUtil{" +
-                "pageIndex=" + pageIndex +
+                "list=" + list +
+                ", pageIndex=" + pageIndex +
                 ", pageSize=" + pageSize +
-                ", pageICount=" + pageCount +
+                ", pageCount=" + pageCount +
                 ", totalCount=" + totalCount +
                 '}';
     }

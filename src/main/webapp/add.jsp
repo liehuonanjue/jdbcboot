@@ -1,16 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!--
-        Charisma v1.0.0
-
-        Copyright 2012 Muhammad Usman
-        Licensed under the Apache License v2.0
-        http://www.apache.org/licenses/LICENSE-2.0
-
-        http://usman.it
-        http://twitter.com/halalit_usman
-    -->
     <meta charset="utf-8">
     <title>Free HTML5 Bootstrap Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,86 +48,47 @@
 
 <body>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-
-
-        <div id="content" class="span10">
-            <!-- content starts -->
-
-
-            <div>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">Home</a> <span class="divider">/</span>
-                    </li>
-                    <li>
-                        <a href="#">Tables</a>
-                    </li>
-                </ul>
+<div class="row-fluid sortable">
+    <div class="box span12">
+        <div class="box-header well" data-original-title>
+            <h2><i class="icon-edit"></i> Form Elements</h2>
+            <div class="box-icon">
+                <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
             </div>
+        </div>
+        <div class="box-content">
+            <form class="form-horizontal" action="/home?methodName=upload" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>上传</legend>
 
-            <div class="row-fluid sortable">
-                <div class="box span12">
-                    <div class="box-header well" data-original-title>
-                        <h2><i class="icon-user"></i> Members</h2>
-                        <div class="box-icon">
-                            <a href="form.jsp" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
-                            <a href="form.jsp" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                            <a href="form.jsp" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                    <div class="control-group">
+                        <label class="control-label">用户名</label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" name="userName">
                         </div>
                     </div>
-                    <div class="box-content">
-                        <table class="table table-striped table-bordered bootstrap-datatable datatable">
-                            <thead>
-                            <tr>
-                                <th>Username</th>
-                                <th>Date registered</th>
-                                <th>Role</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>David R</td>
-                                <td class="center">2012/01/01</td>
-                                <td class="center">Member</td>
-                                <td class="center">
-                                    <span class="label label-success">Active</span>
-                                </td>
-                                <td class="center">
-                                    <a class="btn btn-success" href="form.jsp">
-                                        <i class="icon-zoom-in icon-white"></i>
-                                        View
-                                    </a>
-                                    <a class="btn btn-info" href="form.jsp">
-                                        <i class="icon-edit icon-white"></i>
-                                        Edit
-                                    </a>
-                                    <a class="btn btn-danger" href="#">
-                                        <i class="icon-trash icon-white"></i>
-                                        Delete
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+
+                    <div class="control-group">
+                        <label class="control-label" for="fileInput">File input</label>
+                        <div class="controls">
+                            <input class="input-file uniform_on" id="fileInput" name="fileName" type="file">
+                        </div>
                     </div>
-                </div><!--/span-->
 
-            </div><!--/row-->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                        <button type="reset" class="btn">Cancel</button>
+                    </div>
+                </fieldset>
+            </form>
 
-            <!-- content ends -->
-        </div><!--/#content.span10-->
-    </div><!--/fluid-row-->
+        </div>
+    </div><!--/span-->
 
+</div><!--/row-->
 
-</div><!--/.fluid-container-->
-
-<!-- external javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 
 <!-- jQuery -->
 <script src="js/jquery-1.7.2.min.js"></script>
@@ -208,6 +160,6 @@
 <!-- application script for Charisma demo -->
 <script src="js/charisma.js"></script>
 
-
 </body>
+
 </html>

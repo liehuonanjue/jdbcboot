@@ -1,7 +1,17 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+        Charisma v1.0.0
 
+        Copyright 2012 Muhammad Usman
+        Licensed under the Apache License v2.0
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        http://usman.it
+        http://twitter.com/halalit_usman
+    -->
     <meta charset="utf-8">
     <title>注册页面</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +69,7 @@
         <div class="row-fluid">
             <div class="well span5 center login-box">
                 <div class="alert alert-info">
-                    Please login with your Username and Password.
+                    注册
                 </div>
                 <form class="form-horizontal" action="login?methodName=register" method="post">
                     <fieldset>
@@ -68,6 +78,7 @@
                                                                                         class="input-large span10"
                                                                                         name="username" id="username"
                                                                                         type="text" value="admin"/>
+                            <span id="errorName"></span>
                         </div>
                         <div class="clearfix"></div>
 
@@ -79,12 +90,6 @@
                         </div>
                         <div class="clearfix"></div>
 
-                        <div class="input-prepend">
-                            <label class="remember" for="remember"><input type="checkbox" id="remember"/>Remember
-                                me</label>
-                        </div>
-                        <div class="clearfix"></div>
-
                         <p class="center span5">
                             <button type="submit" class="btn btn-primary">注册</button>
                         </p>
@@ -93,9 +98,7 @@
             </div><!--/span-->
         </div><!--/row-->
     </div><!--/fluid-row-->
-
 </div><!--/.fluid-container-->
-
 <!-- external javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -169,7 +172,8 @@
 <script src="js/jquery.history.js"></script>
 <!-- application script for Charisma demo -->
 <script src="js/charisma.js"></script>
-
+<%--引入需要的js文件  ajax验证--%>
+<script src="js/newjsDom/reg.js"></script>
 
 </body>
 </html>
